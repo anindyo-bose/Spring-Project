@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Email;
 
 @Entity
 @Table(name = "EMP_TBL")
@@ -20,24 +22,30 @@ public class Employee implements Serializable {
 	private int id;
 
 	@Column
+	@NotNull(message = "Name cannot be null")
 	private String name;
 
 	@Column
+	@Email(message = "Email should be valid")
 	private String email;
 
 	@Column
+	@NotNull(message = "Address cannot be null")
 	private String address;
 
 	@Column
+	@NotNull(message = "Contact cannot be null")
 	private String telephone;
 	
 	@Column
+	@NotNull(message = "How this can be null?")
 	private String gender;
 	
 	@Column
+	@NotNull(message = "Password cannot be null")
 	private String password;
 	
-	@Column
+	@Column	
 	private byte[] image;
 
 	
