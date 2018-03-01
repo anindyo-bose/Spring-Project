@@ -15,25 +15,17 @@
 		<table border="1">
 
 			<th>Name</th>
-			<th>Email</th>
-			<th>Gender</th>
-			<th>Address</th>
-			<th>Password</th>
-			<th>Telephone</th>
 			<th>Action</th>
 
 			<c:forEach var="employee" items="${listEmployee}">
 				<tr>
 
 					<td>${employee.name}</td>
-					<td>${employee.email}</td>
-					<td>${employee.gender}</td>
-					<td>${employee.address}</td>
-					<td>${employee.password}</td>
-					<td>${employee.telephone}</td>
 					<td><a href="editEmployee?id=${employee.id}">Edit</a>
-						&nbsp;&nbsp;&nbsp;&nbsp; <a
-						href="deleteEmployee?id=${employee.id}">Delete</a></td>
+						&nbsp;&nbsp;&nbsp;&nbsp; 
+						<a href="viewEmployee?id=${employee.id}">View</a>
+						&nbsp;&nbsp;&nbsp;&nbsp; 
+						<a	href="deleteEmployee?id=${employee.id}">Delete</a></td>
 
 				</tr>
 			</c:forEach>

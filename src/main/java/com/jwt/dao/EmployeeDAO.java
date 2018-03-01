@@ -13,5 +13,5 @@ public interface EmployeeDAO {
 
 	public Employee updateEmployee(Employee employee);
 
-	public Employee getEmployee(int employeeid);
+	public Employee getEmployee(Integer employeeid);
 }

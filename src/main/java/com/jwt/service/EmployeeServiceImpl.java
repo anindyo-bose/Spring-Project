@@ -34,8 +34,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 		employeeDAO.deleteEmployee(employeeId);
 	}
 
-	public Employee getEmployee(int empid) {
-		return employeeDAO.getEmployee(empid);
+	public Employee getEmployee(Integer employeeId) {
+		return employeeDAO.getEmployee(employeeId);
 	}
 
 	public Employee updateEmployee(Employee employee) {

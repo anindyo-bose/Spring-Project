@@ -36,7 +36,11 @@ public class Employee implements Serializable {
 	
 	@Column
 	private String password;
+	
+	@Column
+	private byte[] image;
 
+	
 	public int getId() {
 		return id;
 	}
@@ -91,6 +95,13 @@ public class Employee implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	public byte[] getImage() {
+		return image;
+	}
 
+	public void setImage(byte[] image) {
+		this.image = image;
+	}
 
 }

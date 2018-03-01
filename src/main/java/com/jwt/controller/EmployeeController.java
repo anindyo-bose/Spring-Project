@@ -35,6 +35,17 @@ public class EmployeeController {
 		model.setViewName("home");
 		return model;
 	}
+	
+	@RequestMapping(value = "/viewEmployee")
+	public ModelAndView viewContact(HttpServletRequest request) {
+		int employeeId = Integer.parseInt(request.getParameter("id"));
+		Employee employee = employeeService.getEmployee(employeeId);
+		ModelAndView model = new ModelAndView("View");
+		model.addObject("employee", employee);
+		model.setViewName("View");
+
+		return model;
+	}
 
 	@RequestMapping(value = "/newEmployee", method = RequestMethod.GET)
 	public ModelAndView newContact(ModelAndView model) {
@@ -71,5 +82,7 @@ public class EmployeeController {
 
 		return model;
 	}
+	
+	
 
 }

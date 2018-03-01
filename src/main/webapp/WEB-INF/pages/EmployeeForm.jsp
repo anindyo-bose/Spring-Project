@@ -24,7 +24,7 @@
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><form:input path="password" /></td>
+                <td><form:input path="password" type="password"/></td>
             </tr>
             <tr>
                 <td>Gender:</td>
@@ -38,6 +38,11 @@
                 <td>Telephone:</td>
                 <td><form:input path="telephone" /></td>
             </tr>
+            <tr>
+                <td>Image:</td>
+                <td><form:input path="image" type="file"/></td>
+            </tr>
+            
             
             <tr>
                 <td colspan="2" align="center"><input type="submit" value="Save"></td>

@@ -6,8 +6,7 @@
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- Specifying base package of the Components like Controller, Service, 
-		DAO -->
+	<!-- Specifying base package of the Components like Controller, Service, DAO -->
 	<context:component-scan base-package="com.jwt" />
 
 	<!-- Getting Database properties -->
@@ -53,6 +52,13 @@
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+		<!-- one of the properties available; the maximum file size in bytes -->
+		<property name="maxUploadSize" value="10000000" />
 	</bean>
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
